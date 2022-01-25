@@ -1,8 +1,10 @@
+import Thumbnail from "./Thumbnail";
+
 const Results = ({ results }) => {
   return (
     <div>
-      {results.map((item, index) => (
-        <h3 key={index}>{item.title}</h3>
+      {results.map(result => (
+        <Thumbnail key={result.id} result={result} />
       ))}
     </div>
   );
